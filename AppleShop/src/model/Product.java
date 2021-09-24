@@ -113,7 +113,7 @@ public class Product {
 //    		     + String.format("%2f", originalPrice) + " - " + String.format("%2f", discountValue) + ")" )
 //		s = sb.toString();
 		
-	    s += model + " "  + finish + " " + storage + "GB " + "(cellular connectivity: " + hasCellularConnectivity + "): $(" + String.format("%2f", originalPrice) + " - " + String.format("%2f", discountValue) + ")";
+	    s += model + " "  + finish + " " + storage + "GB " + "(cellular connectivity: " + hasCellularConnectivity + "): $(" + String.format("%.2f", originalPrice) + " - " + String.format("%.2f", discountValue) + ")";
 	
 //		s = String.format("%s %s %dGB (cellular connectivity: %s): $(%.2f - %.2f)",
 //				this.model, this.finish, this.storage, this.hasCellularConnectivity, 
