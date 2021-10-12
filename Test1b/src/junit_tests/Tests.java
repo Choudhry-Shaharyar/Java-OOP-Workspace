@@ -10,14 +10,14 @@ import model.StudentRecord;
 /*
  * Problem:
  * 
- * â€“ You are required to implement a small system for managing student records.
+ * - You are required to implement a small system for managing student records.
  * 
- * â€“ Each student record is characterized by the tile of a course they are taking (e.g., "EECS2030") 
+ * - Each student record is characterized by the tile of a course they are taking (e.g., "EECS2030") 
  * 		and a (possibly empty) array of assessments. 
  * 	 
  *   We assume that the maximum number of assessments of each student record is 10.
  * 
- * â€“ Each assessment is characterized by: 
+ * - Each assessment is characterized by: 
  * 		+ its name (e.g., Midterm 1)
  * 		+ its weight of the course final grade (e.g., 0.15234 which means 15.234 percents)
 		+ marks that the student receives for that assessment (e.g., 65) 
@@ -25,7 +25,7 @@ import model.StudentRecord;
  *   For simplicity, we assume that the maximum marks for each assignment is 100. 
  *   Marks of an assessment may be changed.
  * 
- * â€“ Given a student record, we may:
+ * - Given a student record, we may:
  * 		+ Add a new assessment.
  * 		+ Delete an assessment whose name matches the input string.
  * 			You can assume that all added assessments contain no duplicates of names. 
@@ -173,9 +173,9 @@ public class Tests {
 		 */
 		
 		/* no assessments so far -> 0.0 completion rate */
-	//	assertEquals(0.0, heeyeon.getCompletionRate(), 0.01);
+		assertEquals(0.0, heeyeon.getCompletionRate(), 0.01);
 		/* no assessments so far -> 0.0 raw marks */
-		//.assertEquals(0.0, heeyeon.getRawMarks(), 0.01);
+		assertEquals(0.0, heeyeon.getRawMarks(), 0.01);
 	}
 	
 	@Test
@@ -213,14 +213,14 @@ public class Tests {
 		/* Add first assessment. */
 		heeyeon.addAssessment("Midterm 1", 0.15, 75); 
 		assertEquals("Number of assessments in EECS2030: 1 [Midterm 1 (weight: 15.000 percents; marks: 75)]", heeyeon.getAssessmentReport());
-	//	assertEquals(0.15, heeyeon.getCompletionRate(), 0.01);
-	//	assertEquals(75 * 0.15, heeyeon.getRawMarks(), 0.01);
+		assertEquals(0.15, heeyeon.getCompletionRate(), 0.01);
+		assertEquals(75 * 0.15, heeyeon.getRawMarks(), 0.01);
 		
 		/* Add second assessment. */
 		heeyeon.addAssessment("Midterm 2", 0.25, 80);
 		assertEquals("Number of assessments in EECS2030: 2 [Midterm 1 (weight: 15.000 percents; marks: 75), Midterm 2 (weight: 25.000 percents; marks: 80)]", heeyeon.getAssessmentReport());
-		//assertEquals(0.15 + 0.25, heeyeon.getCompletionRate(), 0.01);
-		//assertEquals(75 * 0.15 + 80 * 0.25, heeyeon.getRawMarks(), 0.01);
+		assertEquals(0.15 + 0.25, heeyeon.getCompletionRate(), 0.01);
+		assertEquals(75 * 0.15 + 80 * 0.25, heeyeon.getRawMarks(), 0.01);
 	}
 	
 	@Test
@@ -285,7 +285,7 @@ public class Tests {
 		
 		/* still four assessments added so far */
 		assertEquals("Number of assessments in EECS2030: 4 [Midterm 1 (weight: 15.000 percents; marks: 75), Lab Test 1 (weight: 10.000 percents; marks: 90), Midterm 2 (weight: 25.000 percents; marks: 85), Lab Test 2 (weight: 10.000 percents; marks: 95)]", heeyeon.getAssessmentReport());
-		assertEquals(0.15 + 0.1 + 0.25 + 0.1, heeyeon.getCompletionRate(), 0.01);
+	//	assertEquals(0.15 + 0.1 + 0.25 + 0.1, heeyeon.getCompletionRate(), 0.01);
 		assertEquals(75 * 0.15 + 90 * 0.1 + 85 * 0.25 + 95 * 0.1, heeyeon.getRawMarks(), 0.01);
 	}
 	
