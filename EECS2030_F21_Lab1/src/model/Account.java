@@ -1,4 +1,4 @@
-package model;
+ package model;
 
 public class Account {
 
@@ -138,9 +138,7 @@ public class Account {
 				this.approved  = "false";
 				this.newStatus = "failDownload";
 				this.tempName = name;
-
 			}
-
 		}
 
 		if(this.NumberOfDownloadedApps < 3) {
@@ -192,37 +190,28 @@ public class Account {
 			else if (getApproved().equals("true")) {
 				s = this.tempName + " is successfully uninstalled for " + this.ownerName +  "."; 
 			}
-
 		}
-
-
 		else if (getStatus().equals("download") && getNewStatus() != "failDownload") {
-
 			if (getApproved().equals("false")) {
 				s = "Error: " + this.tempName + " is not a downloaded app for " + this.ownerName + ".";    
-
-
 			}
-
 			else if (getApproved().equals("true")) {
 				s = this.tempName + " is successfully downloaded for " + this.ownerName + "."; 
 			}
 		}
 		else if (getStatus().equals("download") && getNewStatus() == "failDownload") {
 			s = "Error: " + this.tempName + " has already been downloaded for " + this.ownerName + ".";    
-
 		}
-
+		
 		else if(this.status.equals("submitRating")) {
-
 			if (getApproved().equals("false")) {
 				s = "Error: " + this.tempName + " is not a downloaded app for " + this.ownerName + ".";                                  
 			}
 			else if (getApproved().equals("true")) {
 				s = "Rating score " + this.tempRating + " of " + this.ownerName + " is successfully submitted for " + this.tempName + "."; 
 			}
-
 		}
+		
 		else if(this.status.equals("switch")) {
 			s = "Account for " +  this.ownerName + " is now linked to the " + this.appStore.getBranch() +" store."; 
 		}
@@ -233,9 +222,5 @@ public class Account {
 		}
 
 		return s;
-
-
 	}
-
-
 }

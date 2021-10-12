@@ -20,7 +20,6 @@ public class App {
 
 	}
 
-
 	// constructor
 	public App(String name,int maxNOR) {
 		this.name = name;
@@ -72,9 +71,7 @@ public class App {
 		if(this.nor == 0) {
 			return "No ratings submitted so far!";
 		}
-
 		return "Average of " + this.nor + " ratings: " + this.getAverageRating(ratings) +" (Score 5: " + this.score5 +", " + "Score 4: " + this.score4 +", " + "Score 3: " + this.score3 +", " + "Score 2: " + this.score2 +", "+ "Score 1: " + this.score1 +")";
-
 	}
 
 
@@ -86,12 +83,8 @@ public class App {
 			denominator = denominator + 1;
 		}
 		double result;
-
-
 		result = this.averageRating/(double)this.nor;
-
 		return String.format("%.1f", result); 
-
 	}
 
 	public String notApplicable() {
@@ -141,7 +134,6 @@ public class App {
 			return "n/a";
 		}
 		return s[index];
-
 	}
 
 
@@ -173,34 +165,23 @@ public class App {
 	public String toString() {
 		String s ="";
 
-
 		if (this.nor == 0) {
 			return name + " (Current Version: " + this.getWhatIsNew() + "; " + "Average Rating: " + "n/a)"; 
 		}
 		s+= name + " (Current Version: " + this.getWhatIsNew() + "; " + "Average Rating: " + this.getAverageRating(this.ratings) + ")"; 
-
 		return s ;
-
 	}
-
-
 
 	public Log[] getUpdateLogs() {
 		return updateLogs;
 	}
 
-
 	public void setUpdateLogs(Log[] updateLogs) {
 		this.updateLogs = updateLogs;
 	}
 
-
 	public void releaseUpdate(String version) {
 		this.updateLogs[this.nol] = new Log(version);
 		nol++;
-
 	}
-
-
-
 }

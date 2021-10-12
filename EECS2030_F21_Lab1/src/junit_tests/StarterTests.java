@@ -751,18 +751,18 @@ public class StarterTests {
 
 		acc2.uninstall("GoodNotes 5");
 		assertEquals("GoodNotes 5 is successfully uninstalled for Yuna.", acc2.toString());
-	//	assertTrue(acc2.getNamesOfDownloadedApps().length == 1);
-	//	assertEquals("Things 3 for iPad", acc2.getNamesOfDownloadedApps()[0]);
-	//	assertTrue(acc2.getObjectsOfDownloadedApps().length == 1);
-	//(canadianStore.getApp("Things 3 for iPad"), acc2.getObjectsOfDownloadedApps()[0]);
+		assertTrue(acc2.getNamesOfDownloadedApps().length == 1);
+		assertEquals("Things 3 for iPad", acc2.getNamesOfDownloadedApps()[0]);
+		assertTrue(acc2.getObjectsOfDownloadedApps().length == 1);
+	    assertSame(canadianStore.getApp("Things 3 for iPad"), acc2.getObjectsOfDownloadedApps()[0]);
 
 		acc3.uninstall("Things 3 for iPad");
 		assertEquals("Things 3 for iPad is successfully uninstalled for Heeyeon.", acc3.toString());
-	//	assertTrue(acc3.getNamesOfDownloadedApps().length == 2);
-	//	assertEquals("GoodNotes 5", acc3.getNamesOfDownloadedApps()[0]);
-	//	assertEquals("Notability", acc3.getNamesOfDownloadedApps()[1]);
-	//	assertTrue(acc3.getObjectsOfDownloadedApps().length == 2);
-	//	assertSame(canadianStore.getApp("GoodNotes 5"), acc3.getObjectsOfDownloadedApps()[0]);
-	//	assertSame(canadianStore.getApp("Notability"), acc3.getObjectsOfDownloadedApps()[1]);
+		assertTrue(acc3.getNamesOfDownloadedApps().length == 2);
+		assertEquals("GoodNotes 5", acc3.getNamesOfDownloadedApps()[0]);
+		assertEquals("Notability", acc3.getNamesOfDownloadedApps()[1]);
+		assertTrue(acc3.getObjectsOfDownloadedApps().length == 2);
+		assertSame(canadianStore.getApp("GoodNotes 5"), acc3.getObjectsOfDownloadedApps()[0]);
+		assertSame(canadianStore.getApp("Notability"), acc3.getObjectsOfDownloadedApps()[1]);
 	}
 }

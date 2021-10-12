@@ -46,17 +46,12 @@ public class Log {
 		this.nof++; 
 	}
 
-
-
-
 	public String getFixes() {
 		String s = "[";
 		String[] fixes = new String[this.nof]; 
-
 		if(this.nof == 0) {
 			return "[]";
 		}
-
 		for (int i = 0;  i < this.nof; i++) {
 			if(i == (this.nof - 1)) {
 				fixes[i] = this.fixes[i];
@@ -67,19 +62,14 @@ public class Log {
 			s = s + fixes[i] +", ";
 		}
 		return s;
-
 	}
 
 
 	public String toString() {
 		String s = "";
-
 		s += "Version " + this.version + " contains " + this.nof + " fixes " + this.getFixes();
-
 		return s;
 	}
-
-
 }
 
 
