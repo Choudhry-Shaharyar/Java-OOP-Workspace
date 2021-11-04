@@ -67,17 +67,18 @@ public class Floor {
 			return false; 
 		}
 		Floor other = (Floor) obj;
-		if(this.nou == 0 && other.nou == 0) {
-			return this.capacity == other.capacity;
+		Floor f = new Floor(other);
+		if(this.nou == 0 && f.nou == 0) {
+			return this.capacity == f.capacity;
 		}
-		if(this.nou != other.nou) {
+		if(this.nou != f.nou) {
 			return false;
 		}
 		for(int i = 0; i < this.nou; i++) {
-			for(int j = 0; j < other.nou; j++) {
-				if (this.unit[i].equals(other.unit[j])) {
+			for(int j = 0; j < f.nou; j++) {
+				if (this.unit[i].equals(f.unit[j])) {
 					count = count + 1;
-					other.unit[j].setFunction(""); // making sure this doesnt match again.
+					f.unit[j].setFunction(""); // making sure this doesnt match again.
 					j = 1000000; // to get the loop
 				}
 			}

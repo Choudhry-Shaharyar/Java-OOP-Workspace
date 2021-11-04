@@ -450,6 +450,7 @@ public class StarterTests {
 //		 */
 		assertNotSame(fs2[0], f1);
 		assertEquals(fs2[0], f1);
+		
 //
 		assertNotSame(fs1[0], fs2[0]);
 		assertEquals(fs1[0], fs2[0]);
