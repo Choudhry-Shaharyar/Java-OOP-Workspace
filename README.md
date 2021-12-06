@@ -1,1 +1,21 @@
 # EECS-2030-Workspace
+## Topics covered:
+- OOP in Java: classes, objects, methods
+- Tracing Object Creations and Method Calls: Eclipse Debugger
+- Inferring Classes and Methods from JUnit Test Cases
+- Declaring and Manipulating Reference-Typed, Multi-Valued Attribtes
+- Exceptions
+- Testing for Exceptions
+- Test Driven Development (TDD)
+- Object Equality
+- Call-by-Value
+- Aggregation and Composition
+- Aggregation and Composition
+- Inheritance (motivating example, alternative designs, code reuse)
+- Inheritance (expectations, polymorphism, dynamic binding)
+- Inheritance (type casts, polymorphic arguments and return values)
+- Abstract Class and Interfaces
+- Generics (ArrayList, Hashtable)
+- Recursion
+- Asymptotic Analysis
+- (Singly-)Linked Lists
